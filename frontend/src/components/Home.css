@@ -1,0 +1,329 @@
+.likes {
+  color: rgb(199, 15, 15);
+  font-size: 1.5rem;
+}
+
+.comments {
+  color: rgb(17, 15, 15);
+  font-size: 1.5rem;
+}
+
+.deletes {
+  color: rgb(17, 15, 15);
+  font-size: 1.4rem;
+}
+
+.saves {
+  color: rgb(17, 15, 15);
+  font-size: 1.4rem;
+}
+
+.edits {
+  color: rgb(17, 15, 15);
+  font-size: 1.4rem;
+}
+
+.edits-btn{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(17, 15, 15);
+  font-size: 1.4rem;
+}
+
+.saved-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 3px;
+}
+
+.saved {
+  font-size: 1.2rem;
+}
+
+.deletes:hover {
+  color: rgb(199, 15, 15);
+  transform: scale(1.1);
+}
+
+.likes:hover,
+.comments:hover,
+.saves:hover,
+.edits:hover,
+.edits-btn:hover {
+  transform: scale(1.1);
+}
+
+.comments-icon-default {
+  color: rgb(17, 15, 15);
+  font-size: 1rem;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 2px 2px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.like, .comment, .save , .delete , .edit , .edit-btn , .delete-comment {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.like:hover .tooltip,
+.comment:hover .tooltip,
+.save:hover .tooltip,
+.delete:hover .tooltip,
+.edit:hover .tooltip,
+.edit-btn:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #222;
+}
+
+.logo {
+  color: #fff;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-colour {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #00c6ff;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 120px;
+  border-radius: 5px;
+}
+
+.dropdown p {
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.comm h3,
+.comm p {
+  margin: 0;
+}
+
+.comm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1px 17px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.comm-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-card {
+  background: rgb(198, 194, 194);
+  padding: 20px;
+  width: 400px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 12px;
+}
+
+.comments-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-blog {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-blog input {
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.add-icon {
+  cursor: pointer;
+  display: flex;
+  font-size: 30px;
+}
+
+.search {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.search {
+  width: 300px;
+  padding: 8px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+.search:focus {
+  border-color: #957caa;
+  box-shadow: 0 0 5px rgba(149, 124, 170, 0.5);
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+}
+
+.add-icon {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.edit-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.edit-card {
+  background: #d1cccc;
+  width: 420px;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.edit-input {
+  width: 95%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  outline: none;
+}
+
+.edit-textarea {
+  width: 95%;
+  min-height: 80px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  outline: none;
+  resize: vertical;
+}
+
+.icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.tools {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+}
